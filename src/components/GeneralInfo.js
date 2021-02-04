@@ -11,8 +11,8 @@ class GeneralInfo extends Component {
 
     render() {
         return (
-            <div>
-                GeneralInfo
+            <div className="info-box">
+                <h3>GeneralInfo</h3>
             </div>
         )
     }

@@ -11,8 +11,8 @@ class EducationInfo extends Component {
 
     render() {
         return (
-            <div>
-                EducationInfo
+            <div className="info-box">
+                <h3>EducationInfo</h3>
             </div>
         )
     }

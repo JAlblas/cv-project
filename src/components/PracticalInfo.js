@@ -11,8 +11,8 @@ class PracticalInfo extends Component {
 
     render() {
         return (
-            <div>
-                PracticalInfo
+            <div className="info-box">
+                <h3>PracticalInfo</h3>
             </div>
         )
     }

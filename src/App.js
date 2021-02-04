@@ -7,7 +7,7 @@ import PracticalInfo from './components/PracticalInfo';
 function App() {
   return (
     <div className="App">
-      <p>CV</p>
+      <h1>Curriculum Vitae</h1>
       <GeneralInfo />
       <EducationInfo />
       <PracticalInfo />
