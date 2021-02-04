@@ -1,10 +1,17 @@
-.App {
-  text-align: center;
+body {
+  background-color: #387ee7;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App {
+  text-align: center;
+  background-color: #EFEFEF;
+  width: 1200px;
+  margin: 0 auto;
+
+}
+
+p {
+  margin-top: 0px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
