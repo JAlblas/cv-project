@@ -25,13 +25,18 @@ p {
 
 .info-box {
   background-color: #FFF;
-  height: 300px;
   justify-content: center;
   align-items: center;
   border: 1px solid white;
+  padding: 25px;
+  margin-bottom: 20px;
 }
 
 .info-box > h3 {
-  padding-top: 25px;
   text-decoration: underline;
+}
+
+.field-box > p {
+    display: inline-block;
+    font-weight: normal;
 }
