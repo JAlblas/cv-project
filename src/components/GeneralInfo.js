@@ -9,6 +9,8 @@ class GeneralInfo extends Component {
         };
 
         this.toggleEdit = this.toggleEdit.bind(this);
+
+        console.log(this.props.data);
     }
 
     toggleEdit() {
