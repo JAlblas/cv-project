@@ -20,8 +20,25 @@ h1 {
 
 p {
   margin-top: 0px;
+  margin-bottom: 0px;
   font-weight: bold;
+  text-align: left;
 }
+
+input {
+  padding: 0px;
+  margin: 0px;
+  width: 150px;
+  height: 20px;
+  border: 0px;
+}
+
+label {
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+  margin-right: 25px;
+}​
 
 .info-box {
   background-color: #FFF;
@@ -36,7 +53,19 @@ p {
   text-decoration: underline;
 }
 
+.field-box {
+  height: 25px;
+  padding: auto;
+}
+
 .field-box > p {
     display: inline-block;
     font-weight: normal;
+    background-color: aqua;
+    width: 150px;
+    padding: auto;
+}
+
+button {
+  margin-top: 10px;
 }

@@ -42,15 +42,15 @@ class GeneralInfo extends Component {
             <div className="info-box">
                 <h3>General</h3>
                 <div className="field-box">
-                    <p>Name:</p>
+                    <label>Name:</label>
                     <p>{name}</p>
                 </div>
                 <div className="field-box">
-                    <p>Email:</p>
+                    <label>Email:</label>
                     <p>{email}</p>
                 </div>
                 <div className="field-box">
-                    <p>Telephone:</p>
+                    <label>Telephone:</label>
                     <p>{telephone}</p>
                 </div>
                 <button onClick={this.toggleEdit}>Edit</button>
@@ -61,15 +61,15 @@ class GeneralInfo extends Component {
             <div className="info-box">
                 <h3>General</h3>
                 <div className="field-box">
-                    <p>Name:</p>
+                    <label>Name:</label>
                     <input value={name} name="name" onChange={this.props.handleInputChange}></input>
                 </div>
                 <div className="field-box">
-                    <p>Email:</p>
+                    <label>Email:</label>
                     <input value={email} name="email" onChange={this.props.handleInputChange}></input>
                 </div>
                 <div className="field-box">
-                    <p>Telephone:</p>
+                    <label>Telephone:</label>
                     <input value={telephone} name="telephone" onChange={this.props.handleInputChange} ></input>
                 </div>
                 <button onClick={this.toggleEdit}>Edit</button>
