@@ -9,13 +9,14 @@ class GeneralInfo extends Component {
         };
 
         this.toggleEdit = this.toggleEdit.bind(this);
-
         console.log(this.props.data);
     }
 
     toggleEdit() {
         this.setState({isEditing: !this.state.isEditing});
     }
+
+
 
     render() {
         /*
@@ -34,20 +35,23 @@ class GeneralInfo extends Component {
             </div>
         )
         */
+
+        const { name, email, telephone } = this.props.data;
+
         const normalTemplate = (
             <div className="info-box">
                 <h3>General</h3>
                 <div className="field-box">
                     <p>Name:</p>
-                    <p>test</p>
+                    <p>{name}</p>
                 </div>
                 <div className="field-box">
                     <p>Email:</p>
-                    <p>test</p>
+                    <p>{email}</p>
                 </div>
                 <div className="field-box">
                     <p>Telephone:</p>
-                    <p>test</p>
+                    <p>{telephone}</p>
                 </div>
                 <button onClick={this.toggleEdit}>Edit</button>
             </div>
@@ -58,15 +62,15 @@ class GeneralInfo extends Component {
                 <h3>General</h3>
                 <div className="field-box">
                     <p>Name:</p>
-                    <input value="test"></input>
+                    <input value={name} name="name" onChange={this.props.handleInputChange}></input>
                 </div>
                 <div className="field-box">
                     <p>Email:</p>
-                    <input value="test"></input>
+                    <input value={email} name="email" onChange={this.props.handleInputChange}></input>
                 </div>
                 <div className="field-box">
                     <p>Telephone:</p>
-                    <input value="test"></input>
+                    <input value={telephone} name="telephone" onChange={this.props.handleInputChange} ></input>
                 </div>
                 <button onClick={this.toggleEdit}>Edit</button>
             </div>
