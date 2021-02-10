@@ -22,15 +22,13 @@ p {
   margin-top: 0px;
   margin-bottom: 0px;
   font-weight: bold;
-  text-align: left;
 }
 
 input {
   padding: 0px;
   margin: 0px;
-  width: 150px;
+  width: 146px;
   height: 20px;
-  border: 0px;
 }
 
 label {
@@ -44,7 +42,7 @@ label {
   background-color: #FFF;
   justify-content: center;
   align-items: center;
-  border: 1px solid white;
+  border: 1px solid #000;
   padding: 25px;
   margin-bottom: 20px;
 }
@@ -66,6 +64,12 @@ label {
     padding: auto;
 }
 
+.info-box > p {
+  text-align: center;
+}
+
 button {
-  margin-top: 10px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 15px;
 }

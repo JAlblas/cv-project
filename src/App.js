@@ -24,11 +24,11 @@ class App extends Component {
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
+    this.addEducation = this.addEducation.bind(this);
 
   }
   
   handleInputChange(e) {
-    console.log(e.target.name);
     let targetName = e.target.name;
 
     this.setState(state => {
@@ -36,14 +36,22 @@ class App extends Component {
       console.log(state);
       return state;
     })
-}
+  }
+
+  addEducation() {
+    console.log("adding edu");
+    let newList = this.state.educations.slice();
+    newList.push({school: "haha", study: "study", date: "06/01/2020"});
+    this.setState({educations: newList});
+  }
+
 
   render() {
     return (
       <div className="App">
         <h1>Curriculum Vitae</h1>
         <GeneralInfo data={this.state.generalInfo} handleInputChange={this.handleInputChange}/>
-        <EducationInfo />
+        <EducationInfo data={this.state.educationInfo} />
         <PracticalInfo />
       </div>
 

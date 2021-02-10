@@ -19,22 +19,6 @@ class GeneralInfo extends Component {
 
 
     render() {
-        /*
-        return (
-            <div>
-                {this.state.isEditing ? editingTemplate : normalTemplate}
-                <h3>Count: {this.props.count}</h3>
-                <ul>
-                    {this.props.todos.map((todo) => {
-                        return <li key={todo.index}>{todo.title} - {todo.index}
-                        <button onClick={() => this.props.removeTodo(todo.index)}>Delete</button>
-                        <button onClick={() => this.setState({isEditing: !this.state.isEditing})}>Edit</button>
-                        </li>;
-                    })}
-                </ul>
-            </div>
-        )
-        */
 
         const { name, email, telephone } = this.props.data;
 
