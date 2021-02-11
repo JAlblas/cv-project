@@ -16,7 +16,6 @@ class App extends Component {
         email: ""
       },
       educationInfo: [
-        {test: ""}
       ],
       practicalInfo: [
         {test: ""}
@@ -25,7 +24,7 @@ class App extends Component {
 
     this.handleInputChange = this.handleInputChange.bind(this);
     this.addEducation = this.addEducation.bind(this);
-
+    this.addWork = this.addWork.bind(this);
   }
   
   handleInputChange(e) {
@@ -39,10 +38,15 @@ class App extends Component {
   }
 
   addEducation() {
-    console.log("adding edu");
-    let newList = this.state.educations.slice();
+    let newList = this.state.educationInfo.slice();
     newList.push({school: "haha", study: "study", date: "06/01/2020"});
-    this.setState({educations: newList});
+    this.setState({educationInfo: newList});
+  }
+
+  addWork() {
+    let newList = this.state.practicalInfo.slice();
+    newList.push({school: "haha", study: "study", date: "06/01/2020"});
+    this.setState({practicalInfo: newList});
   }
 
 
@@ -51,7 +55,7 @@ class App extends Component {
       <div className="App">
         <h1>Curriculum Vitae</h1>
         <GeneralInfo data={this.state.generalInfo} handleInputChange={this.handleInputChange}/>
-        <EducationInfo data={this.state.educationInfo} />
+        <EducationInfo data={this.state.educationInfo} addEducation={this.addEducation}/>
         <PracticalInfo />
       </div>
 

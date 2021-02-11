@@ -16,7 +16,7 @@ class EducationInfo extends Component {
         return (
             <div className="info-box" id="education-box">
                 <h3>Education</h3>
-                <button onClick={this.addEducation}>Add Education</button>
+                <button onClick={this.props.addEducation}>Add Education</button>
 
                 <ul>
                     {this.props.data.map((education) => {
@@ -24,19 +24,18 @@ class EducationInfo extends Component {
                         <div className="info-box">
                             <h3>General</h3>
                             <div className="field-box">
-                                <label>Name:</label>
-                                <input value={name} name="name" onChange={this.props.handleInputChange}></input>
+                                <label>School:</label>
+                                <input value={education.school} name="name" onChange={this.props.handleInputChange}></input>
                             </div>
                             <div className="field-box">
-                                <label>Email:</label>
-                                <input value={email} name="email" onChange={this.props.handleInputChange}></input>
+                                <label>Study:</label>
+                                <input value={education.email} name="email" onChange={this.props.handleInputChange}></input>
                             </div>
                             <div className="field-box">
-                                <label>Telephone:</label>
-                                <input value={telephone} name="telephone" onChange={this.props.handleInputChange} ></input>
+                                <label>Date:</label>
+                                <input value={education.date} name="telephone" onChange={this.props.handleInputChange} ></input>
                             </div>
                             
-                            <p key={education.index}>{education.school}-{education.study}-{education.date}</p>
                             <button onClick={() => this.setState({isEditing: !this.state.isEditing})}>Edit</button>
                             <button onClick={() => this.setState({})}>Remove</button>
 

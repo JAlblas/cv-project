@@ -56,7 +56,7 @@ class GeneralInfo extends Component {
                     <label>Telephone:</label>
                     <input value={telephone} name="telephone" onChange={this.props.handleInputChange} ></input>
                 </div>
-                <button onClick={this.toggleEdit}>Edit</button>
+                <button onClick={this.toggleEdit}>Save</button>
             </div>
         )
 
