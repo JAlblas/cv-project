@@ -24,28 +24,53 @@ class App extends Component {
 
     this.handleInputChange = this.handleInputChange.bind(this);
     this.addEducation = this.addEducation.bind(this);
+    this.removeEducation = this.removeEducation.bind(this);
     this.addWork = this.addWork.bind(this);
   }
   
-  handleInputChange(e) {
+  handleInputChange(index, e) {
     let targetName = e.target.name;
+    
+    if (targetName === "school" || targetName === "study" || targetName === "date" ) {
+      this.setState(state => {
+        state.educationInfo[index][targetName] = e.target.value
+        console.log(state);
+        return state;
+      })
+    }
+    else if (targetName === "name" || targetName === "email" || targetName === "telephone" ) {
+      this.setState(state => {
+        state.generalInfo[targetName] = e.target.value
+        console.log(state);
+        return state;
+      })
+    } 
+    else
+    {
+      this.setState(state => {
+        state.practicalInfos[index][targetName] = e.target.value
+        console.log(state);
+        return state;
+      })
+    }
 
-    this.setState(state => {
-      state.generalInfo[targetName] = e.target.value
-      console.log(state);
-      return state;
-    })
   }
 
   addEducation() {
     let newList = this.state.educationInfo.slice();
-    newList.push({school: "haha", study: "study", date: "06/01/2020"});
+    newList.push({school: "", study: "", date: ""});
+    this.setState({educationInfo: newList});
+  }
+
+  removeEducation(index) {
+    let newList = this.state.educationInfo.slice();
+    newList.splice(index, 1);
     this.setState({educationInfo: newList});
   }
 
   addWork() {
     let newList = this.state.practicalInfo.slice();
-    newList.push({school: "haha", study: "study", date: "06/01/2020"});
+    newList.push({school: "", study: "", date: ""});
     this.setState({practicalInfo: newList});
   }
 
@@ -55,7 +80,7 @@ class App extends Component {
       <div className="App">
         <h1>Curriculum Vitae</h1>
         <GeneralInfo data={this.state.generalInfo} handleInputChange={this.handleInputChange}/>
-        <EducationInfo data={this.state.educationInfo} addEducation={this.addEducation}/>
+        <EducationInfo data={this.state.educationInfo} addEducation={this.addEducation} removeEducation={this.removeEducation} handleInputChange={this.handleInputChange}/>
         <PracticalInfo />
       </div>
 

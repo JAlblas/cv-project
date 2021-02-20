@@ -4,45 +4,78 @@ import '../styles/EducationInfo.css';
 class EducationInfo extends Component {
     constructor(props) {
         super(props);
+
+        this.state = {isEditing: false};
     }
 
     render() {
-        const { name, email, telephone } = this.props.data;
-        this.props.data.forEach(element => {
-            console.log("HI")
-            console.log(element);
-        }); {}
-
-        return (
+        const normalTemplate = (
             <div className="info-box" id="education-box">
-                <h3>Education</h3>
+                <h3>Educational Info</h3>
                 <button onClick={this.props.addEducation}>Add Education</button>
+                <button onClick={() => this.setState({isEditing: !this.state.isEditing})}>Edit</button>
 
                 <ul>
-                    {this.props.data.map((education) => {
+                    {this.props.data.map((education, index) => {
                         return (
                         <div className="info-box">
-                            <h3>General</h3>
                             <div className="field-box">
                                 <label>School:</label>
-                                <input value={education.school} name="name" onChange={this.props.handleInputChange}></input>
+                                <p>{education.school}</p>
                             </div>
                             <div className="field-box">
                                 <label>Study:</label>
-                                <input value={education.email} name="email" onChange={this.props.handleInputChange}></input>
+                                <p>{education.study}</p>
                             </div>
                             <div className="field-box">
                                 <label>Date:</label>
-                                <input value={education.date} name="telephone" onChange={this.props.handleInputChange} ></input>
+                                <p>{education.date}</p>
                             </div>
                             
-                            <button onClick={() => this.setState({isEditing: !this.state.isEditing})}>Edit</button>
-                            <button onClick={() => this.setState({})}>Remove</button>
+                            <button onClick={() => this.props.removeEducation(index)}>Remove</button>
+                        </div>
+                        );
+                    })}
+                </ul>
+            </div>
+        )
+
+        const editingTemplate = (
+            <div className="info-box" id="education-box">
+                <h3>Educational Info Edit</h3>
+                <button onClick={this.props.addEducation}>Add Education</button>
+                <button onClick={() => this.setState({isEditing: !this.state.isEditing})}>Edit</button>
+
+                <ul>
+                    {this.props.data.map((education, index) => {
+                        console.log(index);
+                        return (
+                        <div className="info-box">
+                            <div className="field-box">
+                                <label>School:</label>
+                                <input value={education.school} name="school" onChange={(evt) => this.props.handleInputChange(index, evt)}></input>
+                            </div>
+                            <div className="field-box">
+                                <label>Study:</label>
+                                <input value={education.email} name="study" onChange={(evt) => this.props.handleInputChange(index, evt)}></input>
+                            </div>
+                            <div className="field-box">
+                                <label>Date:</label>
+                                <input value={education.date} name="date" onChange={(evt) => this.props.handleInputChange(index, evt)}></input>
+                            </div>
+                            
+                            <button onClick={() => this.props.removeEducation(index)}>Remove</button>
 
                         </div>
                         );
                     })}
                 </ul>
+            </div>
+        )
+
+        return (
+            <div>
+            {this.state.isEditing ? editingTemplate : normalTemplate}
             </div>
         )
     }

@@ -38,15 +38,6 @@ label {
   margin-right: 25px;
 }​
 
-.info-box {
-  background-color: #FFF;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #000;
-  padding: 25px;
-  margin-bottom: 20px;
-}
-
 .info-box > h3 {
   text-decoration: underline;
 }

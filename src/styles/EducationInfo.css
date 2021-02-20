@@ -1,9 +1,16 @@
 
 #education-box {
-    margin: 0 auto;
     color: green;
   }
 
   ul {
       padding: 0;
+  }
+
+  .info-box {
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    margin-bottom: 25px;
   }
