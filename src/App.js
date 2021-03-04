@@ -1,5 +1,6 @@
-import './App.css';
 import React, { Component } from 'react'
+
+import './App.css';
 
 import GeneralInfo from './components/GeneralInfo';
 import EducationInfo from './components/EducationInfo';
@@ -18,7 +19,6 @@ class App extends Component {
       educationInfo: [
       ],
       practicalInfo: [
-        {test: ""}
       ]
     };
 
@@ -26,6 +26,7 @@ class App extends Component {
     this.addEducation = this.addEducation.bind(this);
     this.removeEducation = this.removeEducation.bind(this);
     this.addWork = this.addWork.bind(this);
+    this.removeWork = this.removeWork.bind(this);
   }
   
   handleInputChange(index, e) {
@@ -48,7 +49,7 @@ class App extends Component {
     else
     {
       this.setState(state => {
-        state.practicalInfos[index][targetName] = e.target.value
+        state.practicalInfo[index][targetName] = e.target.value
         console.log(state);
         return state;
       })
@@ -74,6 +75,11 @@ class App extends Component {
     this.setState({practicalInfo: newList});
   }
 
+  removeWork(index) {
+    let newList = this.state.practicalInfo.slice();
+    newList.splice(index, 1);
+    this.setState({practicalInfo: newList});
+  }
 
   render() {
     return (
@@ -81,7 +87,7 @@ class App extends Component {
         <h1>Curriculum Vitae</h1>
         <GeneralInfo data={this.state.generalInfo} handleInputChange={this.handleInputChange}/>
         <EducationInfo data={this.state.educationInfo} addEducation={this.addEducation} removeEducation={this.removeEducation} handleInputChange={this.handleInputChange}/>
-        <PracticalInfo />
+        <PracticalInfo  data={this.state.practicalInfo} addWork={this.addWork} removeWork={this.removeWork} handleInputChange={this.handleInputChange}/>
       </div>
 
     );

@@ -16,25 +16,23 @@ class GeneralInfo extends Component {
         this.setState({isEditing: !this.state.isEditing});
     }
 
-
-
     render() {
 
         const { name, email, telephone } = this.props.data;
 
         const normalTemplate = (
-            <div className="info-box">
+            <div className="info-box" id="general-box">
                 <h3>General</h3>
                 <div className="field-box">
-                    <label>Name:</label>
+                    <span>Name:</span>
                     <p>{name}</p>
                 </div>
                 <div className="field-box">
-                    <label>Email:</label>
+                    <span>Email:</span>
                     <p>{email}</p>
                 </div>
                 <div className="field-box">
-                    <label>Telephone:</label>
+                    <span>Telephone:</span>
                     <p>{telephone}</p>
                 </div>
                 <button onClick={this.toggleEdit}>Edit</button>
@@ -42,29 +40,25 @@ class GeneralInfo extends Component {
         )
 
         const editingTemplate = (
-            <div className="info-box">
+            <div className="info" id="general-box">
                 <h3>General</h3>
                 <div className="field-box">
-                    <label>Name:</label>
+                    <span>Name:</span>
                     <input value={name} name="name" onChange={this.props.handleInputChange}></input>
                 </div>
                 <div className="field-box">
-                    <label>Email:</label>
+                    <span>Email:</span>
                     <input value={email} name="email" onChange={this.props.handleInputChange}></input>
                 </div>
                 <div className="field-box">
-                    <label>Telephone:</label>
+                    <span>Telephone:</span>
                     <input value={telephone} name="telephone" onChange={this.props.handleInputChange} ></input>
                 </div>
                 <button onClick={this.toggleEdit}>Save</button>
             </div>
         )
 
-        return (
-            <div>
-            {this.state.isEditing ? editingTemplate : normalTemplate}
-            </div>
-        )
+        return this.state.isEditing ? editingTemplate : normalTemplate;
     }
 }
 

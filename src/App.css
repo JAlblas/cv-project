@@ -1,5 +1,5 @@
 body {
-  background-color: #f5f4f4;
+  background-color: #6c96d4de;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -8,6 +8,7 @@ body {
   background-color: #f7f7f7;
   width: 1200px;
   margin: 0 auto;
+  margin-top: 25px;
   display: flex;
   flex-direction: column;
 }
@@ -31,16 +32,30 @@ input {
   height: 20px;
 }
 
-label {
+span {
   display: inline-block;
   width: 150px;
   text-align: right;
   margin-right: 25px;
-}​
+}
+
+.info-box {
+  justify-content: center;
+  background-color: #efefef;
+  align-items: center;
+  border: 1px solid #000;
+  margin: 0 25px 25px 25px;
+  padding: 25px;
+}
 
 .info-box > h3 {
   text-decoration: underline;
 }
+
+.info-box > p {
+  text-align: center;
+}
+​
 
 .field-box {
   height: 25px;
@@ -53,10 +68,6 @@ label {
     background-color: aqua;
     width: 150px;
     padding: auto;
-}
-
-.info-box > p {
-  text-align: center;
 }
 
 button {
