@@ -1,5 +1,5 @@
 body {
-  background-color: #6c96d4de;
+  background-color: #4eb5f1;
   font-family: 'Open Sans', sans-serif;
 }
 
@@ -11,6 +11,7 @@ body {
   margin-top: 25px;
   display: flex;
   flex-direction: column;
+  border-radius: 5px;
 }
 
 h1 {
@@ -43,7 +44,7 @@ span {
   justify-content: center;
   background-color: #efefef;
   align-items: center;
-  border: 1px solid #000;
+  border: 1px solid #a3a3a3;
   margin: 0 25px 25px 25px;
   padding: 25px;
 }
@@ -72,6 +73,7 @@ span {
   background-color: white;
   margin: 10px;
   padding: 10px;
+  border: 1px solid #a3a3a3;
 }
 
 button {
