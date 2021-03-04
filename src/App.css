@@ -49,29 +49,53 @@ span {
 }
 
 .info-box > h3 {
-  text-decoration: underline;
+  font-weight: 800;
+  font-size: 2em;
 }
 
 .info-box > p {
   text-align: center;
 }
-​
 
 .field-box {
   height: 25px;
-  padding: auto;
 }
 
 .field-box > p {
     display: inline-block;
     font-weight: normal;
-    background-color: aqua;
     width: 150px;
     padding: auto;
 }
 
+.field-boxes {
+  background-color: white;
+  margin: 10px;
+  padding: 10px;
+}
+
 button {
-  display: block;
   margin: 0 auto;
-  margin-top: 15px;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  margin-right: 10px;
+  display: inline-block;
+  padding:0.5em 1.5em;
+  border-radius:2em;
+  box-sizing: border-box;
+  text-decoration:none;
+  font-family:'Roboto',sans-serif;
+  font-weight:300;
+  font-size: 1.0em;
+  color:#FFFFFF;
+  background-color:#4eb5f1;
+  text-align:center;
+  transition: all 0.2s;
+  border: 0;
+  transition: transform .2s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }

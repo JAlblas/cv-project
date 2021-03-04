@@ -40,19 +40,19 @@ class GeneralInfo extends Component {
         )
 
         const editingTemplate = (
-            <div className="info" id="general-box">
+            <div className="info-box" id="general-box">
                 <h3>General</h3>
                 <div className="field-box">
                     <span>Name:</span>
-                    <input value={name} name="name" onChange={this.props.handleInputChange}></input>
+                    <input value={name} name="name" onChange={(evt) => this.props.handleInputChange(null, evt)}></input>
                 </div>
                 <div className="field-box">
                     <span>Email:</span>
-                    <input value={email} name="email" onChange={this.props.handleInputChange}></input>
+                    <input value={email} name="email" onChange={(evt) => this.props.handleInputChange(null, evt)}></input>
                 </div>
                 <div className="field-box">
                     <span>Telephone:</span>
-                    <input value={telephone} name="telephone" onChange={this.props.handleInputChange} ></input>
+                    <input value={telephone} name="telephone" onChange={(evt) => this.props.handleInputChange(null, evt)} ></input>
                 </div>
                 <button onClick={this.toggleEdit}>Save</button>
             </div>

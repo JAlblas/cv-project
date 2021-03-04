@@ -35,14 +35,12 @@ class App extends Component {
     if (targetName === "school" || targetName === "study" || targetName === "date" ) {
       this.setState(state => {
         state.educationInfo[index][targetName] = e.target.value
-        console.log(state);
         return state;
       })
     }
     else if (targetName === "name" || targetName === "email" || targetName === "telephone" ) {
       this.setState(state => {
         state.generalInfo[targetName] = e.target.value
-        console.log(state);
         return state;
       })
     } 
@@ -71,7 +69,7 @@ class App extends Component {
 
   addWork() {
     let newList = this.state.practicalInfo.slice();
-    newList.push({school: "", study: "", date: ""});
+    newList.push({company: "", tasks: "", title: "", workDate: ""});
     this.setState({practicalInfo: newList});
   }
 
