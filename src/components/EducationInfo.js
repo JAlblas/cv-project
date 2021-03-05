@@ -11,7 +11,7 @@ class EducationInfo extends Component {
     render() {
         const normalTemplate = (
             <div className="info-box" id="education-box">
-            <h3 className="orange">Educational Info</h3>
+            <h3 className="orange">Educational Background</h3>
             <button onClick={this.props.addEducation}>Add Education</button>
             <button onClick={() => this.setState({isEditing: !this.state.isEditing})}>Edit</button>
 
@@ -42,7 +42,7 @@ class EducationInfo extends Component {
 
         const editingTemplate = (
             <div className="info-box" id="education-box">
-            <h3 className="orange">Educational Info</h3>
+            <h3 className="orange">Educational Background</h3>
             <button onClick={this.props.addEducation}>Add Education</button>
             <button onClick={() => this.setState({isEditing: !this.state.isEditing})}>Save</button>
 

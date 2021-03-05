@@ -22,7 +22,7 @@ class GeneralInfo extends Component {
 
         const normalTemplate = (
             <div className="info-box" id="general-box">
-                <h3>General</h3>
+                <h3>General Information</h3>
                 <div className="field-box">
                     <span>Name:</span>
                     <p>{name}</p>
@@ -41,7 +41,7 @@ class GeneralInfo extends Component {
 
         const editingTemplate = (
             <div className="info-box" id="general-box">
-                <h3>General</h3>
+                <h3>General Information</h3>
                 <div className="field-box">
                     <span>Name:</span>
                     <input value={name} name="name" onChange={(evt) => this.props.handleInputChange(null, evt)}></input>

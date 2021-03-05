@@ -10,8 +10,8 @@ class PracticalInfo extends Component {
     render() {
         const normalTemplate = (
             <div className="info-box" id="work-box">
-            <h3>Work Info</h3>
-            <button onClick={this.props.addWork}>Add Education</button>
+            <h3>Work Experience</h3>
+            <button onClick={this.props.addWork}>Add Experience</button>
             <button onClick={() => this.setState({isEditing: !this.state.isEditing})}>Edit</button>
             <div>
                 {this.props.data.map((work, index) => {
@@ -44,8 +44,8 @@ class PracticalInfo extends Component {
 
         const editingTemplate = (
             <div className="info-box" id="work-box">
-            <h3>Work Info</h3>
-            <button onClick={this.props.addWork}>Add Education</button>
+            <h3>Work Experience</h3>
+            <button onClick={this.props.addWork}>Add Experience</button>
             <button onClick={() => this.setState({isEditing: !this.state.isEditing})}>Save</button>
             <div>
                 {this.props.data.map((work, index) => {
